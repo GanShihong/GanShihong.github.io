@@ -4,26 +4,21 @@
   
     
     <entry>
-      <title>Test231008</title>
-      <link href="/2023/10/08/test231008/"/>
-      <url>/2023/10/08/test231008/</url>
+      <title>第一节：初识C语言</title>
+      <link href="/2023/10/09/di-yi-jie-chu-shi-c-yu-yan/"/>
+      <url>/2023/10/09/di-yi-jie-chu-shi-c-yu-yan/</url>
       
-        <content type="html"><![CDATA[<h1 id="测试1"><a href="#测试1" class="headerlink" title="测试1"></a>测试1</h1><p>正文1</p><h2 id="测试2"><a href="#测试2" class="headerlink" title="测试2"></a>测试2</h2><p>正文2</p><h3 id="测试3"><a href="#测试3" class="headerlink" title="测试3"></a>测试3</h3><p>正文3</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2023/10/08/hello-world/"/>
-      <url>/2023/10/08/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="初识C语言"><a href="#初识C语言" class="headerlink" title="初识C语言"></a>初识C语言</h1><blockquote><p>基本了解C语言的基础知识，对C语言有个大概的认识<br>每个知识点就是简单认识，不详细讲解</p></blockquote><p>本章重点：</p><ul><li>什么是C语言</li><li>第一个C语言程序</li><li>数据类型</li><li>变量、常量</li><li>字符串、转移字符、注释</li><li>选择语句</li><li>循环语句</li><li>函数</li><li>数组</li><li>操作符</li><li>常见关键字</li><li>define定义常量和宏</li><li>指针</li><li>结构体</li></ul><hr><h1 id="什么是C语言"><a href="#什么是C语言" class="headerlink" title="什么是C语言"></a>什么是C语言</h1><p>  C语言是一门通用程序设计语言，广泛应用于底层开发。其设计目标是提供C语言的设计目标是提供一种能以简易的方式编译、处理低级存储器、仅产生少量的机器码以及不需要任何运行环境支持便能运行的编程语言。<br>  C语言是一门面向过程的计算机编程语言，与C++，Java等面向对象的编程语言有所不同。<br>其编译器主要有Clang、GCC、WIN-TC、SUBLIME、MSVC、Turbo C等。</p><h1 id="第一个C语言程序"><a href="#第一个C语言程序" class="headerlink" title="第一个C语言程序"></a>第一个C语言程序</h1><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include &lt;stdio.h&gt;int main ()    {        printf ("Hello World\n");        return 0;    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><blockquote><p><code>char</code>        <code>//字符数据类型</code><br><code>short</code>       <code>//短整型</code><br><code>int</code>         <code>//整型</code><br><code>long</code>        <code>//长整型</code><br><code>long long</code>   <code>//更长的整型</code><br><code>float</code>       <code>//单精度浮点数</code><br><code>double</code>      <code>//双精度浮点数</code><br><code>//C语言也没有字符串类型？？</code></p></blockquote><ul><li>为什么出现这么多类型？</li><li>每种类型的大小是多少？</li></ul><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include &lt;stdio.h&gt;int main (){    printf("%d\n", sizeof(char)); &nbsp; &nbsp;printf("%d\n", sizeof(short)); &nbsp; &nbsp;printf("%d\n", sizeof(int)); &nbsp; &nbsp;printf("%d\n", sizeof(long)); &nbsp; &nbsp;printf("%d\n", sizeof(long long)); &nbsp; &nbsp;printf("%d\n", sizeof(float)); &nbsp; &nbsp;printf("%d\n", sizeof(double)); &nbsp; &nbsp;printf("%d\n", sizeof(long double)); &nbsp; &nbsp;return 0;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>注意：存在这么多的类型，其实是为了更加丰富地表达生活中的各种值</p><p>类型的使用：</p><blockquote><p><code>char ch =  'w';</code><br><code>int Weight = 120;</code><br><code>int Salary = 2000;</code></p></blockquote><h1 id="变量、常量"><a href="#变量、常量" class="headerlink" title="变量、常量"></a>变量、常量</h1><h1 id="字符串、转移字符、注释"><a href="#字符串、转移字符、注释" class="headerlink" title="字符串、转移字符、注释"></a>字符串、转移字符、注释</h1><h1 id="选择语句"><a href="#选择语句" class="headerlink" title="选择语句"></a>选择语句</h1><h1 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h1><h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h1 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h1><h1 id="常见关键字"><a href="#常见关键字" class="headerlink" title="常见关键字"></a>常见关键字</h1><h1 id="define定义常量和宏"><a href="#define定义常量和宏" class="headerlink" title="define定义常量和宏"></a>define定义常量和宏</h1><h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h1><h1 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h1>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+            <tag> 初阶 </tag>
+            
+        </tags>
       
     </entry>
     
