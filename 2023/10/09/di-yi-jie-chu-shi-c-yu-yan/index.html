@@ -446,13 +446,31 @@
 </ul>
 <hr>
 <h1 id="什么是C语言"><a href="#什么是C语言" class="headerlink" title="什么是C语言"></a>什么是C语言</h1><p>  C语言是一门通用程序设计语言，广泛应用于底层开发。其设计目标是提供C语言的设计目标是提供一种能以简易的方式编译、处理低级存储器、仅产生少量的机器码以及不需要任何运行环境支持便能运行的编程语言。<br>  C语言是一门面向过程的计算机编程语言，与C++，Java等面向对象的编程语言有所不同。<br>  其编译器主要有Clang、GCC、WIN-TC、SUBLIME、MSVC、Turbo C等。</p>
-<h1 id="第一个C语言程序"><a href="#第一个C语言程序" class="headerlink" title="第一个C语言程序"></a>第一个C语言程序</h1><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include &lt;stdio.h&gt;
+<h1 id="第一个C语言程序"><a href="#第一个C语言程序" class="headerlink" title="第一个C语言程序"></a>第一个C语言程序</h1><p>下面，让我们从最最简单的C程序入手：</p>
+<pre class="line-numbers language-C" data-language="C"><code class="language-C">#include &lt;stdio.h&gt;
 int main ()
     {
         printf ("Hello World\n");
         return 0;
     }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<blockquote>
+<p><strong>详解代码</strong></p>
+<ol>
+<li><code>main</code> 称作主函数，是程序的入口，C语言代码中必须有主函数，并且有且仅有一个主函数。一个项目（工程）中可以有多个 .c 文件，但是多个 .c 文件当中有且只有一个主函数。</li>
+<li><code>#include</code> 是包含的意思，<code>#include &lt;stdio.h&gt;</code> 表示包含了 stdio.h 这个头文件</li>
+<li><code>stdio</code> 即 standard input output，意思是标准输入输出头文件</li>
+<li><code>int</code> 是整型，表示整数</li>
+<li><code>printf</code> 是打印函数，专门用来在屏幕上打印数据，是C语言标准库提供的一个库函数</li>
+<li>第一行的代码将放在后文详细讲解。</li>
+</ol>
+</blockquote>
+<h2 id="main函数的多种写法"><a href="#main函数的多种写法" class="headerlink" title="main函数的多种写法"></a>main函数的多种写法</h2><ol>
+<li>如下图代码所示，main 函数前变成了void，这种写法在比较古老的书中比较常见，这种写法正确，但是不大推荐。<pre class="line-numbers language-C" data-language="C"><code class="language-C">#include &lt;stdio.h&gt;
+void main ()
+{
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
 <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><blockquote>
 <p><code>char</code>        <code>//字符数据类型</code><br><code>short</code>       <code>//短整型</code><br><code>int</code>         <code>//整型</code><br><code>long</code>        <code>//长整型</code><br><code>long long</code>   <code>//更长的整型</code><br><code>float</code>       <code>//单精度浮点数</code><br><code>double</code>      <code>//双精度浮点数</code><br><code>//C语言也没有字符串类型？？</code></p>
 </blockquote>
@@ -513,6 +531,9 @@ int main ()
     printf ("sum = %d\n",sum);
     return 0;
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>在这里，</p>
+</blockquote>
 <h2 id="变量的作用域和生命周期"><a href="#变量的作用域和生命周期" class="headerlink" title="变量的作用域和生命周期"></a>变量的作用域和生命周期</h2><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><h1 id="字符串、转移字符、注释"><a href="#字符串、转移字符、注释" class="headerlink" title="字符串、转移字符、注释"></a>字符串、转移字符、注释</h1><h1 id="选择语句"><a href="#选择语句" class="headerlink" title="选择语句"></a>选择语句</h1><h1 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h1><h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h1 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h1><h1 id="常见关键字"><a href="#常见关键字" class="headerlink" title="常见关键字"></a>常见关键字</h1><h1 id="define定义常量和宏"><a href="#define定义常量和宏" class="headerlink" title="define定义常量和宏"></a>define定义常量和宏</h1><h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h1><h1 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h1>
                 
             </div>
